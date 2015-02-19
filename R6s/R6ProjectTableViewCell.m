@@ -10,14 +10,21 @@
 
 @implementation R6ProjectTableViewCell
 
-- (void)awakeFromNib {
-    // Initialization code
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    [self addSubview:self.titleLabel];
+    [self.titleLabel setFrame:self.bounds];
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (UILabel *)titleLabel {
+    if (!_titleLabel) {
+        _titleLabel = [[UILabel alloc] initWithFrame:self.bounds];
+        [_titleLabel setTextAlignment:NSTextAlignmentCenter];
+        [_titleLabel setTextColor:[UIColor darkTextColor]];
+    }
+    
+    return _titleLabel;
 }
 
 @end

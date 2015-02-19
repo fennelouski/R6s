@@ -10,4 +10,7 @@
 
 @interface R6ViewController : UIViewController
 
+@property (nonatomic, strong) UIToolbar *headerToolbar;
+@property (nonatomic, strong) UISwipeGestureRecognizer *swipeRight;
+
 @end

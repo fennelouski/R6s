@@ -10,4 +10,6 @@
 
 @interface R6ProjectTableViewCell : UITableViewCell
 
+@property (nonatomic, strong) UILabel *titleLabel;
+
 @end

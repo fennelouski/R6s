@@ -8,15 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController <UITextViewDelegate>
+@interface ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong) UITextView *inputTextView, *outputTextView;
-@property (nonatomic, strong) UIToolbar *inputAccessoryView;
-@property (nonatomic, strong) UIButton *processButton;
-@property (nonatomic, strong) NSMutableCharacterSet *validCharacters;
-@property (nonatomic, strong) UIColor *tintColor;
-@property (nonatomic, strong) NSString *lastText;
-@property float keyboardHeight;
+@property (nonatomic, strong) UITableView *projectTable;
+@property (nonatomic, strong) UIToolbar *headerToolbar;
 
 @end
 

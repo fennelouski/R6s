@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "R6ViewController.h"
 
-@interface R6Raizlabs1ViewController : UIViewController
+@interface R6Raizlabs1ViewController : R6ViewController <UITextViewDelegate>
+
+@property (nonatomic, strong) UITextView *inputTextView, *outputTextView;
+@property (nonatomic, strong) UIToolbar *inputAccessoryView;
+@property (nonatomic, strong) UIButton *processButton;
+@property (nonatomic, strong) NSMutableCharacterSet *validCharacters;
+@property (nonatomic, strong) UIColor *tintColor;
+@property (nonatomic, strong) NSString *lastText;
+@property float keyboardHeight;
 
 @end
