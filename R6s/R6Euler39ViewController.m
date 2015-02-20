@@ -51,7 +51,6 @@
     [UIView animateWithDuration:ANIMATION_DURATION animations:^{
         [self.pSlider setFrame:CGRectMake(20.0f, kScreenHeight / 2.0f, kScreenWidth - 40.0f, kScreenHeight/3.0f)];
         [self.pLabel setFrame:CGRectMake(0.0f, kScreenHeight / 3.0f, kScreenWidth, kScreenHeight/6.0f)];
-        [self.answerLabel setFrame:CGRectMake(0.0f, kStatusBarHeight, kScreenWidth, kScreenHeight / 3.0f)];
         [self.headerToolbar setFrame:CGRectMake(0.0f, 0.0f, kScreenWidth, kStatusBarHeight)];
     }];
 }
@@ -79,17 +78,6 @@
     }
     
     return _pSlider;
-}
-
-- (UILabel *)answerLabel {
-    if (!_answerLabel) {
-        _answerLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, kStatusBarHeight, kScreenWidth, kScreenHeight / 3.0f)];
-        [_answerLabel setText:@"Answer"];
-        [_answerLabel setTextAlignment:NSTextAlignmentCenter];
-        [_answerLabel setTextColor:[UIColor darkTextColor]];
-    }
-    
-    return _answerLabel;
 }
 
 #pragma mark - Slider Action

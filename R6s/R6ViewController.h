@@ -12,5 +12,6 @@
 
 @property (nonatomic, strong) UIToolbar *headerToolbar;
 @property (nonatomic, strong) UISwipeGestureRecognizer *swipeRight;
+@property (nonatomic, strong) UILabel *answerLabel;
 
 @end

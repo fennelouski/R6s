@@ -26,14 +26,17 @@
     [self.view setBackgroundColor:[UIColor whiteColor]];
     [self.view addSubview:self.headerToolbar];
     [self.view addGestureRecognizer:self.swipeRight];
+    [self.view addSubview:self.answerLabel];
     
     NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
     [nc addObserver:self selector:@selector(updateHeaderToolbar) name:UIApplicationWillChangeStatusBarFrameNotification object:nil];
+    [self updateHeaderToolbar];
 }
 
 - (void)updateHeaderToolbar {
     [UIView animateWithDuration:ANIMATION_DURATION animations:^{
         [self.headerToolbar setFrame:CGRectMake(0.0f, 0.0f, kScreenWidth, kStatusBarHeight)];
+        [self.answerLabel setFrame:CGRectMake(0.0f, kStatusBarHeight, kScreenWidth, kScreenHeight / 3.0f)];
     }];
 }
 
@@ -46,6 +49,17 @@
     
     return _headerToolbar;
 }
+
+- (UILabel *)answerLabel {
+    if (!_answerLabel) {
+        _answerLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, kStatusBarHeight, kScreenWidth, kScreenHeight / 3.0f)];
+        [_answerLabel setTextAlignment:NSTextAlignmentCenter];
+        [_answerLabel setTextColor:[UIColor darkTextColor]];
+    }
+    
+    return _answerLabel;
+}
+
 
 #pragma mark - Gestures
 
