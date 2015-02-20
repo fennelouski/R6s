@@ -21,6 +21,9 @@
 		908C73D11A96931C008CC5B5 /* R6ProjectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 908C73D01A96931C008CC5B5 /* R6ProjectTableViewCell.m */; };
 		908C73D41A96965C008CC5B5 /* R6ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 908C73D31A96965C008CC5B5 /* R6ViewController.m */; };
 		908C73D91A969F23008CC5B5 /* R6Euler39ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 908C73D81A969F23008CC5B5 /* R6Euler39ViewController.m */; };
+		908C73DC1A96E57C008CC5B5 /* R6Euler45ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 908C73DB1A96E57C008CC5B5 /* R6Euler45ViewController.m */; };
+		908C73DF1A97898B008CC5B5 /* R6Euler81ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 908C73DE1A97898B008CC5B5 /* R6Euler81ViewController.m */; };
+		908C73E11A9791F7008CC5B5 /* p081_matrix.txt in Resources */ = {isa = PBXBuildFile; fileRef = 908C73E01A9791F7008CC5B5 /* p081_matrix.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,11 @@
 		908C73D31A96965C008CC5B5 /* R6ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = R6ViewController.m; sourceTree = "<group>"; };
 		908C73D71A969F23008CC5B5 /* R6Euler39ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = R6Euler39ViewController.h; sourceTree = "<group>"; };
 		908C73D81A969F23008CC5B5 /* R6Euler39ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = R6Euler39ViewController.m; sourceTree = "<group>"; };
+		908C73DA1A96E57C008CC5B5 /* R6Euler45ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = R6Euler45ViewController.h; sourceTree = "<group>"; };
+		908C73DB1A96E57C008CC5B5 /* R6Euler45ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = R6Euler45ViewController.m; sourceTree = "<group>"; };
+		908C73DD1A97898B008CC5B5 /* R6Euler81ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = R6Euler81ViewController.h; sourceTree = "<group>"; };
+		908C73DE1A97898B008CC5B5 /* R6Euler81ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = R6Euler81ViewController.m; sourceTree = "<group>"; };
+		908C73E01A9791F7008CC5B5 /* p081_matrix.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = p081_matrix.txt; path = "Source Files/p081_matrix.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +115,7 @@
 				908C73D51A9697B8008CC5B5 /* Project View Controllers */,
 				908C73C51A967266008CC5B5 /* NSCharacterSet+AppFunctions.h */,
 				908C73C61A967266008CC5B5 /* NSCharacterSet+AppFunctions.m */,
+				908C73E21A9791FA008CC5B5 /* Resources */,
 				908C73A61A9651EA008CC5B5 /* Main.storyboard */,
 				908C73A91A9651EA008CC5B5 /* Images.xcassets */,
 				908C73AB1A9651EA008CC5B5 /* LaunchScreen.xib */,
@@ -151,6 +160,10 @@
 				908C73CD1A968D89008CC5B5 /* R6Raizlabs1ViewController.m */,
 				908C73D71A969F23008CC5B5 /* R6Euler39ViewController.h */,
 				908C73D81A969F23008CC5B5 /* R6Euler39ViewController.m */,
+				908C73DA1A96E57C008CC5B5 /* R6Euler45ViewController.h */,
+				908C73DB1A96E57C008CC5B5 /* R6Euler45ViewController.m */,
+				908C73DD1A97898B008CC5B5 /* R6Euler81ViewController.h */,
+				908C73DE1A97898B008CC5B5 /* R6Euler81ViewController.m */,
 			);
 			name = "Project View Controllers";
 			sourceTree = "<group>";
@@ -166,6 +179,14 @@
 				908C73CA1A968BCE008CC5B5 /* R6ProjectManager.m */,
 			);
 			name = "Table of Contents View";
+			sourceTree = "<group>";
+		};
+		908C73E21A9791FA008CC5B5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				908C73E01A9791F7008CC5B5 /* p081_matrix.txt */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +272,7 @@
 			files = (
 				908C73A81A9651EA008CC5B5 /* Main.storyboard in Resources */,
 				908C73AD1A9651EA008CC5B5 /* LaunchScreen.xib in Resources */,
+				908C73E11A9791F7008CC5B5 /* p081_matrix.txt in Resources */,
 				908C73AA1A9651EA008CC5B5 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +291,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				908C73DC1A96E57C008CC5B5 /* R6Euler45ViewController.m in Sources */,
+				908C73DF1A97898B008CC5B5 /* R6Euler81ViewController.m in Sources */,
 				908C739F1A9651EA008CC5B5 /* AppDelegate.m in Sources */,
 				908C73CB1A968BCE008CC5B5 /* R6ProjectManager.m in Sources */,
 				908C73D91A969F23008CC5B5 /* R6Euler39ViewController.m in Sources */,
