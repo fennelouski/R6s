@@ -10,4 +10,8 @@
 
 @interface R6Euler81ViewController : R6ViewController
 
+@property (nonatomic, strong) NSMutableArray *rows;
+@property (nonatomic, strong) NSMutableArray *minimumRows;
+@property (nonatomic, strong) NSMutableDictionary *grid;
+
 @end

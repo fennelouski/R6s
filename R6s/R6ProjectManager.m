@@ -9,6 +9,8 @@
 #import "R6ProjectManager.h"
 #import "R6Raizlabs1ViewController.h"
 #import "R6Euler39ViewController.h"
+#import "R6Euler45ViewController.h"
+#import "R6Euler81ViewController.h"
 
 @implementation R6ProjectManager {
     NSArray *_projects;
@@ -30,7 +32,9 @@
     
     if (self) {
         _projects = @[@"R6s",
-                     @"Euler 39"
+                      @"Euler 39",
+                      @"Euler 45",
+                      @"Euler 81"
                      ];
     }
     
@@ -59,6 +63,14 @@
                 
             case 1:
                 individualProjectView = [R6Euler39ViewController new];
+                break;
+                
+            case 2:
+                individualProjectView = [R6Euler45ViewController new];
+                break;
+                
+            case 3:
+                individualProjectView = [R6Euler81ViewController new];
                 break;
                 
             default:
