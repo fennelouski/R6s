@@ -11,6 +11,7 @@
 #import "R6Euler39ViewController.h"
 #import "R6Euler45ViewController.h"
 #import "R6Euler81ViewController.h"
+#import "R6Euler101ViewController.h"
 
 @implementation R6ProjectManager {
     NSArray *_projects;
@@ -34,7 +35,8 @@
         _projects = @[@"R6s",
                       @"Euler 39",
                       @"Euler 45",
-                      @"Euler 81"
+                      @"Euler 81",
+                      @"Euler 101"
                      ];
     }
     
@@ -71,6 +73,10 @@
                 
             case 3:
                 individualProjectView = [R6Euler81ViewController new];
+                break;
+                
+            case 4:
+                individualProjectView = [R6Euler101ViewController new];
                 break;
                 
             default:

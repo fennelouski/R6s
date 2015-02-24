@@ -24,6 +24,7 @@
 		908C73DC1A96E57C008CC5B5 /* R6Euler45ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 908C73DB1A96E57C008CC5B5 /* R6Euler45ViewController.m */; };
 		908C73DF1A97898B008CC5B5 /* R6Euler81ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 908C73DE1A97898B008CC5B5 /* R6Euler81ViewController.m */; };
 		908C73E11A9791F7008CC5B5 /* p081_matrix.txt in Resources */ = {isa = PBXBuildFile; fileRef = 908C73E01A9791F7008CC5B5 /* p081_matrix.txt */; };
+		908C73E51A97CB56008CC5B5 /* R6Euler101ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 908C73E41A97CB56008CC5B5 /* R6Euler101ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		908C73DD1A97898B008CC5B5 /* R6Euler81ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = R6Euler81ViewController.h; sourceTree = "<group>"; };
 		908C73DE1A97898B008CC5B5 /* R6Euler81ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = R6Euler81ViewController.m; sourceTree = "<group>"; };
 		908C73E01A9791F7008CC5B5 /* p081_matrix.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = p081_matrix.txt; path = "Source Files/p081_matrix.txt"; sourceTree = "<group>"; };
+		908C73E31A97CB56008CC5B5 /* R6Euler101ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = R6Euler101ViewController.h; sourceTree = "<group>"; };
+		908C73E41A97CB56008CC5B5 /* R6Euler101ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = R6Euler101ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +167,8 @@
 				908C73DB1A96E57C008CC5B5 /* R6Euler45ViewController.m */,
 				908C73DD1A97898B008CC5B5 /* R6Euler81ViewController.h */,
 				908C73DE1A97898B008CC5B5 /* R6Euler81ViewController.m */,
+				908C73E31A97CB56008CC5B5 /* R6Euler101ViewController.h */,
+				908C73E41A97CB56008CC5B5 /* R6Euler101ViewController.m */,
 			);
 			name = "Project View Controllers";
 			sourceTree = "<group>";
@@ -299,6 +304,7 @@
 				908C73A21A9651EA008CC5B5 /* R6s.xcdatamodeld in Sources */,
 				908C73C71A967266008CC5B5 /* NSCharacterSet+AppFunctions.m in Sources */,
 				908C73A51A9651EA008CC5B5 /* ViewController.m in Sources */,
+				908C73E51A97CB56008CC5B5 /* R6Euler101ViewController.m in Sources */,
 				908C73D11A96931C008CC5B5 /* R6ProjectTableViewCell.m in Sources */,
 				908C73CE1A968D89008CC5B5 /* R6Raizlabs1ViewController.m in Sources */,
 				908C739C1A9651EA008CC5B5 /* main.m in Sources */,
