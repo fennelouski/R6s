@@ -12,8 +12,8 @@
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kStatusBarHeight (([[UIApplication sharedApplication] statusBarFrame].size.height == 20.0f) ? 20.0f : (([[UIApplication sharedApplication] statusBarFrame].size.height == 40.0f) ? 20.0f : 0.0f))
 #define kScreenHeight (([[UIApplication sharedApplication] statusBarFrame].size.height > 20.0f) ? [UIScreen mainScreen].bounds.size.height - 20.0f : [UIScreen mainScreen].bounds.size.height)
-#define AVAILABLE_HEIGHT (kScreenHeight-kStatusBarHeight)
 #define TOOLBAR_HEIGHT 44.0f
+#define AVAILABLE_HEIGHT (kScreenHeight-kStatusBarHeight-TOOLBAR_HEIGHT)
 #define ANIMATION_DURATION 0.35f
 
 #define LAST_STRING_KEY @"lastStringKey"
@@ -49,7 +49,7 @@
 
 - (void)updateViews {
     [UIView animateWithDuration:ANIMATION_DURATION animations:^{
-        [self.inputTextView setFrame:CGRectMake(0.0f, kStatusBarHeight, kScreenWidth, AVAILABLE_HEIGHT/2.0f)];
+        [self.inputTextView setFrame:CGRectMake(0.0f, kStatusBarHeight, kScreenWidth, kScreenHeight - self.keyboardHeight - kStatusBarHeight)];
         [self.outputTextView setFrame:CGRectMake(0.0f, kStatusBarHeight + AVAILABLE_HEIGHT/2.0f, kScreenWidth, AVAILABLE_HEIGHT/2.0f)];
         [self.inputAccessoryView setFrame:CGRectMake(0.0, 0.0f, kScreenWidth, TOOLBAR_HEIGHT)];
         [self.processButton setFrame:self.inputAccessoryView.bounds];
@@ -126,7 +126,7 @@
 - (UITextView *)outputTextView {
     if (!_outputTextView) {
         _outputTextView = [[UITextView alloc] initWithFrame:CGRectMake(0.0f, kStatusBarHeight + AVAILABLE_HEIGHT/2.0f, kScreenWidth, AVAILABLE_HEIGHT/2.0f)];
-        [_outputTextView setUserInteractionEnabled:NO];
+        [_outputTextView setUserInteractionEnabled:YES];
         [_outputTextView setEditable:NO];
         [_outputTextView setFont:[UIFont systemFontOfSize:16.0f]];
         [_outputTextView setBackgroundColor:[UIColor colorWithWhite:0.95f alpha:1.0f]];
