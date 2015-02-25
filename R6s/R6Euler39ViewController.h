@@ -14,6 +14,6 @@
 @property (nonatomic, strong) UILabel *pLabel;
 @property (nonatomic, strong) UILabel *answerLabel;
 @property (nonatomic, strong) NSMutableDictionary *resultsDictionary, *referenceDictionary;
-@property int p;
+@property int p, maximumP;
 
 @end

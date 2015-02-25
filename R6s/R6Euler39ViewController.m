@@ -36,6 +36,7 @@
     [self.view addSubview:self.pSlider];
     [self.view addSubview:self.answerLabel];
     self.p = self.pSlider.value;
+    self.maximumP = 1000;
     self.resultsDictionary = [[NSMutableDictionary alloc] init];
     self.referenceDictionary = [[NSMutableDictionary alloc] init];
     
@@ -45,6 +46,8 @@
     [nc addObserver:self  selector:@selector(updateViews)    name:UIDeviceOrientationDidChangeNotification  object:nil];
     [nc addObserver:self selector:@selector(updateViews) name:UIApplicationWillChangeStatusBarFrameNotification object:nil];
     [self updateViews];
+    
+    [self calculateHigherP];
 }
 
 - (void)updateViews {
@@ -144,6 +147,45 @@
     }
     
     [self.answerLabel setText:[NSString stringWithFormat:@"%@\t--\t%@", highScoreKey, highScore]];
+}
+
+- (void)calculateHigherP {
+    self.maximumP++;
+    
+    for (int i = 1; i < self.maximumP; i++) {
+        NSNumber *currentCheck = [NSNumber numberWithInt:i];
+        
+        if (![self.resultsDictionary objectForKey:currentCheck]) {
+            int numberOfSolutions = 0;
+            
+            for (int lowerBound = 1; lowerBound * lowerBound * 2 < i*i; lowerBound++) {
+                int a = lowerBound;
+                for (int b = a + 1; a * a + b * b <= i * i; b++) {
+                    if (a*a+b*b == i*i) {
+                        int total = a + b + i;
+                        NSNumber *key = [NSNumber numberWithInt:total];
+                        NSNumber *oldValue = [self.referenceDictionary objectForKey:key];
+                        if (!oldValue) {
+                            oldValue = [NSNumber numberWithInt:1];
+                        }
+                        
+                        else {
+                            oldValue = [NSNumber numberWithInt:[oldValue intValue] + 1];
+                        }
+                        
+                        [self.referenceDictionary setObject:oldValue forKey:key];
+                        
+                        numberOfSolutions++;
+                    }
+                }
+            }
+            
+            [self.resultsDictionary setObject:[NSNumber numberWithInt:numberOfSolutions] forKey:currentCheck];
+        }
+    }
+    
+    [self.pSlider setMaximumValue:self.maximumP];
+    [self performSelector:@selector(calculateHigherP) withObject:self afterDelay:0.005f + (((float)self.maximumP)/10000.0f)];
 }
 
 #pragma mark - Memory Warning
