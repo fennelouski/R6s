@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27AB3AE61C8CDD6600F4F718 /* R6Euler97ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AB3AE51C8CDD6600F4F718 /* R6Euler97ViewController.m */; };
+		27AB3AE91C8CE34200F4F718 /* R6Euler92ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AB3AE81C8CE34200F4F718 /* R6Euler92ViewController.m */; };
+		80718A221D89CCAA00B9A0E4 /* R6NumberWordLoopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80718A211D89CCAA00B9A0E4 /* R6NumberWordLoopViewController.m */; };
 		908C739C1A9651EA008CC5B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 908C739B1A9651EA008CC5B5 /* main.m */; };
 		908C739F1A9651EA008CC5B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 908C739E1A9651EA008CC5B5 /* AppDelegate.m */; };
 		908C73A21A9651EA008CC5B5 /* R6s.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 908C73A01A9651EA008CC5B5 /* R6s.xcdatamodeld */; };
@@ -38,6 +41,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27AB3AE41C8CDD6600F4F718 /* R6Euler97ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = R6Euler97ViewController.h; sourceTree = "<group>"; };
+		27AB3AE51C8CDD6600F4F718 /* R6Euler97ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = R6Euler97ViewController.m; sourceTree = "<group>"; };
+		27AB3AE71C8CE34200F4F718 /* R6Euler92ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = R6Euler92ViewController.h; sourceTree = "<group>"; };
+		27AB3AE81C8CE34200F4F718 /* R6Euler92ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = R6Euler92ViewController.m; sourceTree = "<group>"; };
+		80718A201D89CCAA00B9A0E4 /* R6NumberWordLoopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = R6NumberWordLoopViewController.h; sourceTree = "<group>"; };
+		80718A211D89CCAA00B9A0E4 /* R6NumberWordLoopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = R6NumberWordLoopViewController.m; sourceTree = "<group>"; };
 		908C73961A9651E9008CC5B5 /* R6s.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = R6s.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		908C739A1A9651EA008CC5B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		908C739B1A9651EA008CC5B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -167,8 +176,14 @@
 				908C73DB1A96E57C008CC5B5 /* R6Euler45ViewController.m */,
 				908C73DD1A97898B008CC5B5 /* R6Euler81ViewController.h */,
 				908C73DE1A97898B008CC5B5 /* R6Euler81ViewController.m */,
+				27AB3AE71C8CE34200F4F718 /* R6Euler92ViewController.h */,
+				27AB3AE81C8CE34200F4F718 /* R6Euler92ViewController.m */,
+				27AB3AE41C8CDD6600F4F718 /* R6Euler97ViewController.h */,
+				27AB3AE51C8CDD6600F4F718 /* R6Euler97ViewController.m */,
 				908C73E31A97CB56008CC5B5 /* R6Euler101ViewController.h */,
 				908C73E41A97CB56008CC5B5 /* R6Euler101ViewController.m */,
+				80718A201D89CCAA00B9A0E4 /* R6NumberWordLoopViewController.h */,
+				80718A211D89CCAA00B9A0E4 /* R6NumberWordLoopViewController.m */,
 			);
 			name = "Project View Controllers";
 			sourceTree = "<group>";
@@ -298,10 +313,13 @@
 			files = (
 				908C73DC1A96E57C008CC5B5 /* R6Euler45ViewController.m in Sources */,
 				908C73DF1A97898B008CC5B5 /* R6Euler81ViewController.m in Sources */,
+				80718A221D89CCAA00B9A0E4 /* R6NumberWordLoopViewController.m in Sources */,
+				27AB3AE61C8CDD6600F4F718 /* R6Euler97ViewController.m in Sources */,
 				908C739F1A9651EA008CC5B5 /* AppDelegate.m in Sources */,
 				908C73CB1A968BCE008CC5B5 /* R6ProjectManager.m in Sources */,
 				908C73D91A969F23008CC5B5 /* R6Euler39ViewController.m in Sources */,
 				908C73A21A9651EA008CC5B5 /* R6s.xcdatamodeld in Sources */,
+				27AB3AE91C8CE34200F4F718 /* R6Euler92ViewController.m in Sources */,
 				908C73C71A967266008CC5B5 /* NSCharacterSet+AppFunctions.m in Sources */,
 				908C73A51A9651EA008CC5B5 /* ViewController.m in Sources */,
 				908C73E51A97CB56008CC5B5 /* R6Euler101ViewController.m in Sources */,
@@ -507,6 +525,7 @@
 				908C73BE1A9651EA008CC5B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		908C73BF1A9651EA008CC5B5 /* Build configuration list for PBXNativeTarget "R6sTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +534,7 @@
 				908C73C11A9651EA008CC5B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

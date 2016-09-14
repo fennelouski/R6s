@@ -11,7 +11,10 @@
 #import "R6Euler39ViewController.h"
 #import "R6Euler45ViewController.h"
 #import "R6Euler81ViewController.h"
+#import "R6Euler92ViewController.h"
+#import "R6Euler97ViewController.h"
 #import "R6Euler101ViewController.h"
+#import "R6NumberWordLoopViewController.h"
 
 @implementation R6ProjectManager {
     NSArray *_projects;
@@ -36,7 +39,10 @@
                       @"Euler 39",
                       @"Euler 45",
                       @"Euler 81",
-                      @"Euler 101"
+                      @"Euler 92",
+                      @"Euler 97",
+                      @"Euler 101",
+                      @"Word Loop"
                      ];
     }
     
@@ -76,9 +82,21 @@
                 break;
                 
             case 4:
-                individualProjectView = [R6Euler101ViewController new];
+                individualProjectView = [R6Euler92ViewController new];
                 break;
                 
+            case 5:
+                individualProjectView = [R6Euler97ViewController new];
+                break;
+                
+            case 6:
+                individualProjectView = [R6Euler101ViewController new];
+                break;
+
+            case 7:
+                individualProjectView = [R6NumberWordLoopViewController new];
+                break;
+
             default:
                 break;
         }

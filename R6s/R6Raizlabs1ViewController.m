@@ -23,6 +23,8 @@
 
 @interface R6Raizlabs1ViewController ()
 
+@property (nonatomic, strong) UIView *inputAccessoryView;
+
 @end
 
 @implementation R6Raizlabs1ViewController
@@ -103,7 +105,7 @@
     if (!_inputTextView) {
         _inputTextView = [[UITextView alloc] initWithFrame:CGRectMake(0.0f, kStatusBarHeight, kScreenWidth, AVAILABLE_HEIGHT/2.0f)];
         [_inputTextView setDelegate:self];
-        [_inputTextView setInputAccessoryView:self.inputAccessoryView];
+//        [_inputTextView setInputAccessoryView:self.inputAccessoryView];
         [_inputTextView setText:@"Watson come here."];
         [_inputTextView setFont:[UIFont systemFontOfSize:16.0f]];
         [_inputTextView setTintColor:self.tintColor];
@@ -141,6 +143,8 @@
         _inputAccessoryView = [[UIToolbar alloc] initWithFrame:CGRectMake(0.0, 0.0f, kScreenWidth, TOOLBAR_HEIGHT)];
         [_inputAccessoryView addSubview:self.processButton];
         [_inputAccessoryView setTintColor:self.tintColor];
+        [_inputAccessoryView setHidden:YES];
+        [_inputAccessoryView setAlpha:0.0f];
     }
     
     return _inputAccessoryView;
@@ -165,9 +169,9 @@
         _validCharacters = [NSMutableCharacterSet characterSetWithCharactersInString:charactersToIncludeAsValid];
         
         // extra character sets that would unnecessarily increase the size of the character set
-        //        [validCharacters formUnionWithCharacterSet:[NSCharacterSet decimalDigitCharacterSet]];
-        //        [validCharacters formUnionWithCharacterSet:[NSCharacterSet letterCharacterSet]];
-        //        [validCharacters formUnionWithCharacterSet:[NSCharacterSet alphanumericCharacterSet]];
+//        [validCharacters formUnionWithCharacterSet:[NSCharacterSet decimalDigitCharacterSet]];
+//        [validCharacters formUnionWithCharacterSet:[NSCharacterSet letterCharacterSet]];
+//        [validCharacters formUnionWithCharacterSet:[NSCharacterSet alphanumericCharacterSet]];
         
         NSString *charactersToExcludeAsInvalid = @"?!/\\"; // just precautionary
         [_validCharacters removeCharactersInString:charactersToExcludeAsInvalid];
@@ -298,10 +302,12 @@
                     }
                     
                     // last valid character in a string
+                    // next character is invalid
                     // restart the counting over again
                     else if ([self.validCharacters characterIsMember:currentCharacter]) {
                         if (characterCount > 0) {
-                            [newWord appendFormat:@"%d%c", characterCount, currentCharacter];
+                            characterCount++;
+                            [newWord appendFormat:@"%d", characterCount];
                         }
                         
                         else {
@@ -348,11 +354,17 @@
 - (void)keyboardDidShow:(NSNotification *)notification {
     self.keyboardHeight = [[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size.height;
     
+    [self.inputAccessoryView setAlpha:1.0f];
+    [self.inputAccessoryView setHidden:NO];
+    
     [self updateViews];
 }
 
 - (void)keyboardDidHide:(NSNotification *)notification {
     self.keyboardHeight = 0.0f;
+    
+    [self.inputAccessoryView setAlpha:0.0f];
+    [self.inputAccessoryView setHidden:YES];
     
     [self updateViews];
 }
